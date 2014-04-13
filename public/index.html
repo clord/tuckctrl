@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+      <title>Hinton Control</title>
+      <link rel="stylesheet" href="/stylesheets/style.css?v=1">
+      <link rel="stylesheet" type="text/css" href="/lib/semantic/packaged/css/semantic.css">
+
+      <script type="text/javascript" src="/lib/jquery/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript" src="/lib/semantic/packaged/javascript/semantic.min.js"></script>
+      <script type="text/javascript" src="/lib/react-0.10.0/react-0.10.0.js"></script>
+      <script type="text/javascript" src="/lib/sugar.min.js"></script>
+      <script type="text/javascript" src="/lib/underscore-min.js"></script>
+      <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+   </head>
+   <body class="home">
+      <div class="ui page grid masthead segment">
+         <nav class="column">
+            <div class="secondary pointing ui menu">
+               <div class="header item"><a href="/">Hinton Control</a></div>
+               <div class="right menu">
+                   <a class="item">House</a>
+                   <a class="item">Shop</a>
+                   <a class="item active">Coop</a>
+                   <a class="item">GH</a>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div id="main" class="ui page grid segment">
+      </div>
+      <script type="text/javascript" src="/lib/foundation-5/js/foundation.min.js"></script>
+      <script type="text/javascript" src="/lib/momentjs/moment.min.js"></script>
+      <script type="text/javascript" src="/build/app.js"></script>
+      <script type="text/javascript">
+         $(document).foundation();
+         React.renderComponent(Coop({socketUrl: "http://burns.home.lord.ac"}, null), document.getElementById('main'));
+      </script>
+   </body>
+</html>

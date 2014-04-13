@@ -1,0 +1,12 @@
+templog
+.DS_Store
+tucktuck.pid
+smoother/dist
+tucktuck.log
+tucktuck.smf
+.module-cache
+node_modules
+# These are build products, don't need to keep in git
+public/images/temps-last-two-days.svg
+public/images/temp-over-time.svg
+public/images/eggs-over-time.svg
